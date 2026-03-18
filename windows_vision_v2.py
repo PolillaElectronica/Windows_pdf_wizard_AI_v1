@@ -67,9 +67,9 @@ def aplicar_filtros_vision(archivo_entrada, archivo_temporal):
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
         
         # Filtros de imagen: Oscurecer fondo, reventar contraste y afilar bordes
-        img = ImageEnhance.Brightness(img).enhance(0.7)
-        img = ImageEnhance.Contrast(img).enhance(2.5)
-        img = ImageEnhance.Sharpness(img).enhance(2.0)
+        img = ImageEnhance.Brightness(img).enhance(0.9)
+        img = ImageEnhance.Contrast(img).enhance(1.3)
+        img = ImageEnhance.Sharpness(img).enhance(1.5)
         
         imagenes.append(img)
     
