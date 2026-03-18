@@ -1,5 +1,9 @@
 @echo off
 TITLE PDF OCR Vision V2 - Alto Contraste
+
+:: ESTA ES LA LÍNEA MÁGICA: Obliga a Windows a ubicarse en esta misma carpeta
+cd /d "%~dp0"
+
 echo ===================================================
 echo   Iniciando sistema de Visión Artificial para PDF
 echo ===================================================
@@ -15,5 +19,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Ejecutar el script principal
+:: ¡IMPORTANTE! Si cambiaste el nombre del archivo de Python, cámbialo aquí también:
 python windows_vision_v2.py
+
 pause
