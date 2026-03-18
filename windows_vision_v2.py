@@ -21,7 +21,7 @@ def setup_venv():
             subprocess.check_call([sys.executable, "-m", "venv", venv_dir])
         
         python_venv = os.path.join(venv_dir, "Scripts", "python.exe")
-        os.execl(python_venv, python_venv, *sys.argv)
+        os.execl(python_venv, python_venv, os.path.abspath(__file__))
 
 def setup_windows_auto():
     """Verifica e instala Tesseract en Windows automáticamente con Winget."""
